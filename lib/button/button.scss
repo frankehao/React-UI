@@ -1,0 +1,53 @@
+@import "../helper";
+
+.wheels-button {
+  padding: 4px 16px;
+  line-height: 22px;
+  transition: all 250ms;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-normal {
+    color: #333;
+    border: 1px solid lighten(#333, 50%);
+    background: white;
+
+
+    &:hover,
+    &:focus {
+      border-color: $main-color;
+      color: $main-color;
+    }
+  }
+
+  &-important {
+    color: white;
+    border: 1px solid $main-color;
+    background: $main-color;
+
+    &:hover,
+    &:focus {
+      background: lighten($main-color, 10%);
+      border-color: lighten($main-color, 10%);
+    }
+  }
+
+  &-danger {
+    color: white;
+    border: 1px solid #ff4d4f;
+    background: #ff4d4f;
+
+    &:hover,
+    &:focus {
+      background: lighten(#ff4d4f, 10%);
+      border-color: lighten(#ff4d4f, 10%);
+    }
+  }
+}

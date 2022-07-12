@@ -1,0 +1,19 @@
+@import "../helper";
+
+.gu-layout {
+  display: flex;
+  flex-direction: column;
+
+  &-content {
+    flex-grow: 1;
+  }
+
+  & > & {
+    flex-grow: 1;
+  }
+
+  &-hasAside {
+    flex-direction: row;
+
+  }
+}
