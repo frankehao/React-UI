@@ -17,7 +17,7 @@ ReactDOM.render(
       <Header className="site-header">
         <div className="logo">
           <img src={logo} width="48" height="48" alt=""/>
-          <span> 熊猫UI </span>
+          <span> Panda-UI </span>
         </div>
       </Header>
       <Layout>
