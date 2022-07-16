@@ -11,7 +11,7 @@ const Icon: React.FunctionComponent<IconProps> =
   ({className, name, ...restProps}) => {
 
     return (
-      <svg className={classes('fui-icon', className)}
+      <svg className={classes('fui-icon', className)}   //给类名加上了前缀
            {...restProps}
       >
         <use xlinkHref={`#${name}`}/>

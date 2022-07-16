@@ -15,10 +15,10 @@ interface Props {
 const scopedClass = scopedClassMaker('fui-dialog');
 const sc = scopedClass;
 const Dialog: React.FunctionComponent<Props> = (props) => {
-  const onClickClose: React.MouseEventHandler = (e) => {
+  const onClickClose: React.MouseEventHandler = (e) => {//点击关闭就触发传入的关闭函数
     props.onClose(e);
   };
-  const onClickMask: React.MouseEventHandler = (e) => {
+  const onClickMask: React.MouseEventHandler = (e) => {//点击遮罩层， 如果允许遮罩层关闭，就触发关闭函数
     if (props.closeOnClickMask) {
       props.onClose(e);
     }
@@ -26,9 +26,10 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
   const result = props.visible &&
     <Fragment>
       <div className={sc('mask')} onClick={onClickMask}>
+      {/*遮罩层 */}
       </div>
       <div className={sc('')}>
-        <div className={sc('close')} onClick={onClickClose}>
+        <div className={sc('close')} onClick={onClickClose}>          {/*一个x */}
           <Icon name="close"/>
         </div>
         <header className={sc('header')}>
@@ -53,6 +54,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
 Dialog.defaultProps = {
   closeOnClickMask: false
 };
+
 const modal = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: () => void) => {
   const close = () => {
     ReactDOM.render(React.cloneElement(component, {visible: false}), div);

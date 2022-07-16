@@ -19,8 +19,6 @@ const Layout: React.FunctionComponent<Props> = (props) => {
       {props.children}
     </div>
   );
-
-
 };
 
 export default Layout;
