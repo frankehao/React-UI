@@ -23,5 +23,4 @@ const scopedClassMaker = (prefix: string) => //实际上其他组件真正使用
       .join('-'))
     .concat(options && options.extra || [])  //连接类名和默认类名
     .join(' ');
-
 export {scopedClassMaker};
